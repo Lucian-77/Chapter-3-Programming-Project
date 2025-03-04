@@ -1,4 +1,4 @@
-// Chapter 3 Programming Project.cpp : This file contains the 'recipe' function. Program execution begins and ends there.
+// Chapter 3 Programming Project.cpp : This file contains the 'Tutor' function. Program execution begins and ends there.
 //
 
 #include <iostream>
