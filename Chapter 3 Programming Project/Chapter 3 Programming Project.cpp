@@ -17,6 +17,6 @@ int main()
     std::cin >> nOComp;
     double total = prince * pow((1 + (intRate / nOComp)), nOComp);
     double interest = total - prince;
-    std::cout << setprecision(2) << "\nEarned interest: $" << interest << "\n\nTotal amount in savings: $" << total << "\n";
+    std::cout << std::setprecision(2) << "\nEarned interest: $" << interest << "\n\nTotal amount in savings: $" << total << "\n";
     return 0;
 }
