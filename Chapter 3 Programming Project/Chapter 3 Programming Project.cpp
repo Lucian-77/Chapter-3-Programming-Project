@@ -6,11 +6,17 @@
 
 int main()
 {
-    std::cout << "How many cookies do you wish to make?\n\nNumber of cookies: ";
-    double numOCookies;
-    std::cin >> numOCookies;
-    double ratio = numOCookies / 48;
-    double cOSugar = 1.5 * ratio, cOButter = 1 * ratio, cOFlour = 2.75 * ratio;
-    std::cout << std::setprecision(3) << "\nYou will need:\n" << cOSugar << " cups of sugar,\n" << cOButter << " cups of butter,\nAnd " << cOFlour << " cups of flour.\n";
+    std::cout << "What is your principle? $";
+    double prince;
+    std::cin >> prince;
+    std::cout << "\nWhat is your interest rate? ";
+    double intRate;
+    std::cin >> intRate;
+    std::cout << "%\nHow many times will it compound? ";
+    double nOComp;
+    std::cin >> nOComp;
+    double total = prince * pow((1 + (intRate / nOComp)), nOComp);
+    double interest = total - prince;
+    std::cout << setprecision(2) << "\nEarned interest: $" << interest << "\n\nTotal amount in savings: $" << total << "\n";
     return 0;
 }
