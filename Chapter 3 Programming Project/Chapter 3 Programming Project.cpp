@@ -2,15 +2,33 @@
 //
 
 #include <iostream>
-#include <iomanip>
+#include <random>
 
 int main()
 {
-    std::cout << "How many cookies do you wish to make?\n\nNumber of cookies: ";
-    double numOCookies;
-    std::cin >> numOCookies;
-    double ratio = numOCookies / 48;
-    double cOSugar = 1.5 * ratio, cOButter = 1 * ratio, cOFlour = 2.75 * ratio;
-    std::cout << std::setprecision(3) << "\nYou will need:\n" << cOSugar << " cups of sugar,\n" << cOButter << " cups of butter,\nAnd " << cOFlour << " cups of flour.\n";
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dist(1, 1000);
+    int num1 = dist(gen), num2 = dist(gen);
+    std::cout << "What is the sum of " << num1 << " and " << num2 << "?\n\n";
+    int answer;
+    std::cout << "Answer: ";
+    std::cin >> answer;
+    int cAnswer = num1 + num2;
+    if (answer == cAnswer) {
+        std::cout << "\nCorrect!\n";
+    }
+    else {
+        std::cout << "\nIncorrect, try again.\n\n";
+        std::cout << "Answer: ";
+        int answer2;
+        std::cin >> answer2;
+        if (answer2 == cAnswer) {
+            std::cout << "\nCorrect!\n";
+        }
+        else {
+            std::cout << "\nIncorrect, the correct answer is " << cAnswer << "\n";
+        }
+    }
     return 0;
 }
