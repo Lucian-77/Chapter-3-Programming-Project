@@ -11,6 +11,6 @@ int main()
     std::cin >> numOCookies;
     double ratio = numOCookies / 48;
     double cOSugar = 1.5 * ratio, cOButter = 1 * ratio, cOFlour = 2.75 * ratio;
-    std::cout << std::setprecision(3) << "\nYou will need:\n" << cOSugar << " cups of sugar,\n" << cOButter << " cups of butter,\nAnd " << cOFlour << " cups of flour.\n";
+    std::cout << std::fixed << std::setprecision(2) << "\nYou will need:\n" << cOSugar << " cups of sugar,\n" << cOButter << " cups of butter,\nAnd " << cOFlour << " cups of flour.\n";
     return 0;
 }
