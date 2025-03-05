@@ -9,7 +9,7 @@ int main()
     std::cout << "What is your principle amount? $";
     double prince;
     std::cin >> prince;
-    std::cout << "\nWhat is your interest rate? ";
+    std::cout << "\nWhat is your interest rate? %";
     double intRate;
     std::cin >> intRate;
     std::cout << "\nHow many times will it compound? ";
