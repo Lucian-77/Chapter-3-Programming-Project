@@ -6,13 +6,13 @@
 
 int main()
 {
-    std::cout << "What is your principle amount? $";
+    std::cout << std::left << std::setw(38) << "What is your principle amount?" << std::right << "$ ";
     double prince;
     std::cin >> prince;
-    std::cout << "\nWhat is your interest rate? %";
+    std::cout << std::left << std::setw(39) << "\nWhat is your interest rate?" << std::right << "% ";
     double intRate;
     std::cin >> intRate;
-    std::cout << "\nHow many times will it compound? ";
+    std::cout << "\nHow many times will it compound? " << "amount: ";
     double nOComp;
     std::cin >> nOComp;
     double total = prince * pow((1 + ((intRate / 100) / nOComp)), nOComp);
